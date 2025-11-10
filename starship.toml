@@ -1,0 +1,5 @@
+[gcloud]
+disabled = true
+
+[git_status]
+disabled = true
