@@ -14,3 +14,5 @@ vim.keymap.set("n", "<space>to", function()
 	vim.api.nvim_win_set_height(0, 15) -- Set height to 5 lines
 	job_id = vim.bo.channel           -- Save terminal's job ID
 end)
+
+vim.keymap.set("n", "<leader>n", ":Neotree toggle<CR>", { desc = "Toggle NeoTree" })
