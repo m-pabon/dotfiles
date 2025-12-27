@@ -1,24 +1,23 @@
 return {
 	{
-		'vyfor/cord.nvim',
-		build = ':Cord update',
+		"vyfor/cord.nvim",
+		build = ":Cord update",
 		-- opts = {}
 
 		config = function()
-			require('cord').setup {
-				-- Your configuration options go here
+			require("cord").setup({
 				editor = {
-					client = 'neovim',
-					tooltip = 'btw',
+					client = "neovim",
+					tooltip = "btw",
 					icon = nil,
 				},
 				display = {
-					theme = 'catppuccin',
-					flavor = 'accent',
+					theme = "catppuccin",
+					flavor = "accent",
 					swap_fields = false,
 					swap_icons = false,
 				},
-			}
+			})
 		end,
-	}
+	},
 }

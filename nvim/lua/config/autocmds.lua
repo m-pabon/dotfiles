@@ -6,3 +6,11 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.highlight.on_yank()
 	end,
 })
+
+vim.keymap.set("n", "<space>to", function()
+	vim.cmd.vnew()                   -- Create new vertical split
+	vim.cmd.term()                   -- Open terminal in that split
+	vim.cmd.wincmd("J")              -- Move window to bottom (horizontal)
+	vim.api.nvim_win_set_height(0, 5) -- Set height to 5 lines
+	job_id = vim.bo.channel          -- Save terminal's job ID
+end)
