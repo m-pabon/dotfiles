@@ -27,3 +27,14 @@ vim.api.nvim_create_autocmd("FileType", {
 --    pcall(vim.treesitter.start)
 --  end,
 --})
+
+-- Treesitter code folding
+vim.api.nvim_create_autocmd("FileType", {
+	desc = "Enable Treesitter folding",
+	group = vim.api.nvim_create_augroup("treesitter-folds", { clear = true }),
+	callback = function()
+		vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
+		vim.wo[0][0].foldmethod = "expr"
+		vim.wo[0][0].foldenable = false -- start with folds open
+	end,
+})
