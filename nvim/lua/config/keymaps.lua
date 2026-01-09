@@ -2,7 +2,7 @@
 vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>", { desc = "Source current file" })
 vim.keymap.set("n", "<space>x", ":.lua<CR>", { desc = "Execute current line as Lua" })
 vim.keymap.set("v", "<space>x", ":lua<CR>", { desc = "Execute selection as Lua" })
-vim.keymap.set("n", "<space>ft", function()
+vim.keymap.set("n", "<space>to", function()
 	vim.cmd.vnew()                    -- Create new vertical split
 	vim.cmd.term()                    -- Open terminal in that split
 	vim.cmd.wincmd("J")               -- Move window to bottom (horizontal)

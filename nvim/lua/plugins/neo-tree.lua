@@ -7,6 +7,11 @@ return {
 			"MunifTanjim/nui.nvim",
 			"nvim-tree/nvim-web-devicons",
 		},
+		config = function()
+			require("neo-tree").setup({})
+			vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { desc = "Toggle Neo-tree" })
+			vim.keymap.set("n", "<leader>E", ":Neotree reveal<CR>", { desc = "Reveal file in Neo-tree" })
+		end,
 	},
 	{
 		"antosha417/nvim-lsp-file-operations",
